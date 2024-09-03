@@ -1,4 +1,4 @@
-# Find The Variable
+# Find X
 
 This project is a simple Python program that addresses a common problem with older Casio calculators: finding the unknown variable in an equation can be time-consuming. This code solves that problem by rapidly finding the unknown variable in various types of equations. Future updates will include support for more complex equations.
 
