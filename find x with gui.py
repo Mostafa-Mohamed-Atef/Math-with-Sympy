@@ -1,14 +1,13 @@
 import ttkbootstrap as ttk
 from tkinter import messagebox
-import sympy as sy
-
+from sympy import *
 
 def calculate():
     try:
         l, r = equ.get().strip().split('=')
         output.set('')
-        eqx = sy.Eq(sy.sympify(l), sy.sympify(r))
-        solved = sy.solve(eqx)
+        eqx = Eq(sympify(l), sympify(r))
+        solved = solve(eqx)
         output.set(solved)
     except:
         messagebox.showerror('Invalid input', 'You need to enter a valid equation!')
