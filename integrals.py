@@ -1,6 +1,6 @@
 from sympy import *
 init_printing(use_unicode=False)
-equation = input("Enter your function: \n")
-x = Symbol('x')
-integration = integrate(sympify(equation))
-print(f"{integration} + c")
+problem = input("Enter Your Problem: \n")
+respect_to = symbols(input("With Respect to: \n"))
+integration = diff(sympify(problem), sympify(respect_to))
+print(f"Answer => {integration} + c")
