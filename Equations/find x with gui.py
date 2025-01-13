@@ -11,6 +11,9 @@ def calculate():
         output.set(solved)
     except:
         messagebox.showerror('Invalid input', 'You need to enter a valid equation!')
+def save():
+    with open('equ.txt', 'w') as file:
+        file.write(equ.get())
 
 def clear():
     equ_entry.delete(0, ttk.END)
@@ -48,6 +51,8 @@ clear_button.pack(side='left', padx=5)
 cal_button = ttk.Button(master=button_frame, text="Calculate", command=calculate)
 cal_button.pack(side='right', padx=5)
 
+save_button = ttk.Button(master=button_frame, text="Save", command=save)
+save_button.pack(side='right', padx=5)
 # Output Frame
 output_frame = ttk.Frame(master=window, padding=(20, 10))
 output_frame.pack(fill='x')
