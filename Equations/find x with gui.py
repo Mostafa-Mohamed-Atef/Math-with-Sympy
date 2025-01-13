@@ -12,8 +12,8 @@ def calculate():
     except:
         messagebox.showerror('Invalid input', 'You need to enter a valid equation!')
 def save():
-    with open('equ.txt', 'w') as file:
-        file.write(equ.get())
+    with open('equ.txt', 'a') as file:
+        file.write(equ.get() + '\n')
 
 def clear():
     equ_entry.delete(0, ttk.END)
